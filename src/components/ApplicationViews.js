@@ -1,6 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { ArticleCard } from "./Articles/ArticleCard"
+import { EventList } from "./Events/EventList"
 import { ArticleList } from "./Articles/ArticleList"
 import { FriendList } from "./Friends/FriendList"
 
@@ -9,9 +9,9 @@ export const ApplicationViews = () => {
     <>
 
       <Route exact path="/">
-        <ArticleList/>
+        <ArticleList />
       </Route>
-      
+
       <Route path="/friends">
         {/* Render the component for list of friends */}
         <FriendList />
@@ -22,8 +22,9 @@ export const ApplicationViews = () => {
       <Route path="/tasks">
         {/* Render the component for the user's tasks */}
       </Route>
+
       <Route path="/events">
-        {/* Render the component for the user's events */}
+        <EventList />
       </Route>
     </>
   )
