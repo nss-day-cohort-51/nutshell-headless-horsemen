@@ -3,16 +3,21 @@ import { Route } from "react-router-dom"
 import { EventCard } from "./Events/EventCard"
 import { EventList } from "./Events/EventList"
 
+import { ArticleCard } from "./Articles/ArticleCard"
+import { ArticleList } from "./Articles/ArticleList"
+import { FriendList } from "./Friends/FriendList"
 
 export const ApplicationViews = () => {
   return (
     <>
 
       <Route exact path="/">
-        {/* Render the component for news articles */}
+        <ArticleList />
       </Route>
+
       <Route path="/friends">
         {/* Render the component for list of friends */}
+        <FriendList />
       </Route>
       <Route path="/messages">
         {/* Render the component for the messages */}
