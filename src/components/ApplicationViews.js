@@ -1,7 +1,11 @@
 import React from "react"
 import { Route } from "react-router-dom"
+
 import { EventCard } from "./Events/EventCard"
 import { EventList } from "./Events/EventList"
+
+=======
+import { FriendList } from "./Friends/FriendList"
 
 
 export const ApplicationViews = () => {
@@ -13,6 +17,7 @@ export const ApplicationViews = () => {
       </Route>
       <Route path="/friends">
         {/* Render the component for list of friends */}
+        <FriendList />
       </Route>
       <Route path="/messages">
         {/* Render the component for the messages */}
