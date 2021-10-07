@@ -5,6 +5,7 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./Nutshell.css"
+import { ArticleCard } from "./Articles/ArticleCard"
 
 export const Nutshell = () => (
   <>
@@ -29,5 +30,6 @@ export const Nutshell = () => (
     <Route path="/register">
       <Register />
     </Route>
-  </>
+  
+    </>
 )
