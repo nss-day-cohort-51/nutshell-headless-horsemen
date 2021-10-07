@@ -1,5 +1,9 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { TaskEditForm } from "./task/TaskEditForm";
+import { TaskForm } from './task/TaskForm';
+import { TaskList } from "./task/TaskList"
+
 import { EventList } from "./Events/EventList"
 import { ArticleList } from "./Articles/ArticleList"
 import { FriendList } from "./Friends/FriendList"
@@ -36,9 +40,17 @@ export const ApplicationViews = () => {
         {/* Render the component for the messages */}
       </Route>
 
-      <Route path="/tasks">
-        {/* Render the component for the user's tasks */}
-      </Route>
+      <Route path="/tasks/create">
+            <TaskForm />
+          </Route>
+
+          <Route path="/tasks/:taskId(\d+)/edit">
+           <TaskEditForm />
+          </Route>
+
+          <Route exact path="/tasks">
+          <TaskList />
+          </Route>
 
       <Route path="/events">
         <EventList />
