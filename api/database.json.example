@@ -1,8 +1,119 @@
 {
-  "users": [],
-  "articles": [],
-  "messages": [],
-  "events": [],
-  "tasks": [],
-  "friends": []
-}
+    "users": [{
+        "id": 1,
+        "name": "Devery",
+        "email": "dpage@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "Katie",
+        "email": "klong@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "Ben",
+        "email": "bmosley@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Tessema",
+        "email": "tf@gmail.com"
+    }],
+    "articles": [{
+        "id": 1,
+        "userId":1,
+        "url":"https://www.nytimes.com/2021/10/06/us/politics/trump-election-fraud-report.html",
+        "title":"title",
+        "synopsis":"yada",
+        "timestamp":2042
+    },
+    {
+        "id": 2,
+        "userId":2,
+        "url":"https://www.nytimes.com/2021/10/06/us/politics/trump-election-fraud-report.html",
+        "title":"title",
+        "synopsis":"yada",
+        "timestamp":2042
+    },
+    {
+        "id": 3,
+        "userId":3,
+        "url":"https://www.nytimes.com/2021/10/06/us/politics/trump-election-fraud-report.html",
+        "title":"title",
+        "synopsis":"yada",
+        "timestamp":2042
+    }
+    ],
+    "messages": [{
+        "id": 1,
+        "userId": 1,
+        "message": "yayaya"
+    },
+    {
+        "id": 2,
+        "userId": 1,
+        "message": "yayaya"
+    },
+    {
+        "id": 3,
+        "userId": 1,
+        "message": "yayaya"
+    }],
+    "events": [{
+        "id":1,
+        "userId":1,
+        "name":"gogog",
+        "location":"here",
+        "date":"01/31/20"
+    },
+    {
+        "id":1,
+        "userId":1,
+        "name":"gogog",
+        "location":"here",
+        "date":"01/31/20"
+    },
+    {
+        "id":1,
+        "userId":1,
+        "name":"gogog",
+        "location":"here",
+        "date":"01/31/20"
+    }],
+    "tasks": [{
+        "id":1,
+        "userId":1,
+        "task": "this",
+        "completeBy": "this",
+        "completed": true
+    },
+    {
+        "id":2,
+        "userId":2,
+        "task": "this",
+        "completeBy": "this",
+        "completed": true
+    },
+    {
+        "id":3,
+        "userId":3,
+        "task": "this",
+        "completeBy": "this",
+        "completed": true
+    }],
+    "friends": [{
+        "id": 1,
+        "userId": 1,
+        "currentUserId": 2
+    },
+    {
+        "id": 2,
+        "userId": 3,
+        "currentUserId": 1
+    },
+    {
+        "id": 3,
+        "userId": 1,
+        "currentUserId": 2
+    }]
+  }
