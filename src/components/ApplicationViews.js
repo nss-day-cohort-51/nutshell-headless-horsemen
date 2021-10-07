@@ -4,17 +4,28 @@ import { TaskEditForm } from "./task/TaskEditForm";
 import { TaskForm } from './task/TaskForm';
 import { TaskList } from "./task/TaskList"
 
+import { EventList } from "./Events/EventList"
+import { ArticleList } from "./Articles/ArticleList"
+import { FriendList } from "./Friends/FriendList"
+import { ArticleForm } from "./Articles/ArticleForm"
 
 export const ApplicationViews = () => {
   return (
     <>
 
       <Route exact path="/">
-        {/* Render the component for news articles */}
+        <ArticleList />
       </Route>
+
+      <Route path="/articles/create">
+          <ArticleForm />
+      </Route>
+      
       <Route path="/friends">
         {/* Render the component for list of friends */}
+        <FriendList />
       </Route>
+
       <Route path="/messages">
         {/* Render the component for the messages */}
       </Route>
@@ -32,7 +43,7 @@ export const ApplicationViews = () => {
           </Route>
 
       <Route path="/events">
-        {/* Render the component for the user's events */}
+        <EventList />
       </Route>
     </>
   )
