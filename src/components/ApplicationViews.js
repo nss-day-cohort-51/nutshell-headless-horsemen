@@ -1,9 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { EventCard } from "./Events/EventCard"
 import { EventList } from "./Events/EventList"
-
-import { ArticleCard } from "./Articles/ArticleCard"
 import { ArticleList } from "./Articles/ArticleList"
 import { FriendList } from "./Friends/FriendList"
 
