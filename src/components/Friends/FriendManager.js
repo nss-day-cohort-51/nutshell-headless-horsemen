@@ -12,7 +12,7 @@ export const getFriendById = (friendId) => {
 
 // fetches all friends
 export const getAllFriends = () => {
-    return fetch(`${remoteURL}/friends`)
+    return fetch(`${remoteURL}/friends?_expand=user`)
     .then(res => res.json())
   }
 
