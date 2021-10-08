@@ -10,8 +10,11 @@
     border:black;
   }
   
+  .header {
+    text-align: center;
+  }
   .card_content {
-    padding: .5em; 
+    padding: 1em; 
   }
   
   .card_article_content h3 {
@@ -38,6 +41,21 @@
     border-radius: 2px;
     margin: .1em;
     
+  }
+
+  div.delete-article {
+   width: 450px;
+  }
+
+  div.content {
+    padding-left: 5%;
+  }
+
+  p.title {
+    padding-left: 5%;
+    font-weight: bold;
+    font-size: .8cm;
+    text-align: center;
   }
 
   div.articles_card {
@@ -78,8 +96,15 @@
     color: cornsilk;
     text-align: center;
     text-decoration: none;
-    width:450px;
+    width: 400px;
     font-size: 14px;
     border-radius: 2px;
     margin: 2em;
+    margin-bottom: 2em;
   }
+
+  section.section-content {
+background-color: lightgrey;
+  }
+
+
