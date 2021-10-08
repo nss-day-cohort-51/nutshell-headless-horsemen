@@ -80,7 +80,7 @@ export const EventEditForm = () => {
                     </div>
                     <div className="alignRight">
                         <button
-                            type="button" disabled={isLoading}
+                            type="button" //disabled={isLoading}
                             onClick={updateExistingEvent}
                             className="btn btn-primary"
                         >Submit</button>

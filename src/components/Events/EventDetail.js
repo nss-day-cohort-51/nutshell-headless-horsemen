@@ -27,7 +27,7 @@ export const EventDetail = () => {
                 setEvents({
                     name: event.name,
                     location: event.location,
-                    date: event.location,
+                    date: event.date,
 
                 });
                 setIsLoading(false);
@@ -40,7 +40,6 @@ export const EventDetail = () => {
             <div className="event__location">{event.location}</div>
             {/* What's up with the question mark???? See below.*/}
             <div className="event__date">Date: {event.date}</div>
-
             <button type="button" disabled={isLoading} onClick={handleDelete}>
                 Delete
             </button>
