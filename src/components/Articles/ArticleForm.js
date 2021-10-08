@@ -44,7 +44,7 @@ export const ArticleForm = () => {
 	const handleClickSaveArticle = (event) => {
 		event.preventDefault() 
 			addArticle(article)
-				.then(() => history.push("/articles"))
+				.then(() => history.push("/"))
 		
 	}
 
@@ -66,7 +66,7 @@ export const ArticleForm = () => {
             <fieldset>
 				<div className="form-group">
 					<label htmlFor="timestamp">Timestamp:</label>
-					<input type="text" id="timestamp" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Timestamp" value={article.timestamp} />
+					<input type="date" id="timestamp" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Timestamp" value={Date.now(article.timestamp)} />
 				</div>
 			</fieldset>
             <fieldset>
