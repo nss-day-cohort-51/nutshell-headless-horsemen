@@ -7,8 +7,11 @@ import { TaskList } from "./task/TaskList"
 import { EventList } from "./Events/EventList"
 import { ArticleList } from "./Articles/ArticleList"
 import { FriendList } from "./Friends/FriendList"
+import { EventEditForm } from "./Events/EventEditForm"
+import { EventForm } from "./Events/EventForm"
 import { ArticleForm } from "./Articles/ArticleForm"
 import { NewFriendForm } from "./Friends/NewFriendForm"
+import { EventDetail } from "./Events/EventDetail";
 
 export const ApplicationViews = () => {
   return (
@@ -19,11 +22,12 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/articles/create">
-          <ArticleForm />
+        <ArticleForm />
       </Route>
       
 
       
+
       <Route path="/friends">
         {/* Render the component for list of friends */}
         <FriendList />
@@ -41,19 +45,31 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/tasks/create">
-            <TaskForm />
-          </Route>
+        <TaskForm />
+      </Route>
 
-          <Route path="/tasks/:taskId(\d+)/edit">
-           <TaskEditForm />
-          </Route>
+      <Route path="/tasks/:taskId(\d+)/edit">
+        <TaskEditForm />
+      </Route>
 
-          <Route exact path="/tasks">
-          <TaskList />
-          </Route>
+      <Route exact path="/tasks">
+        <TaskList />
+      </Route>
 
-      <Route path="/events">
+      <Route exact path="/events">
         <EventList />
+      </Route>
+
+      <Route exact path="/events/edit/:eventId(\d+)">
+        <EventEditForm />
+      </Route>
+
+      <Route exact path="/events/:eventId(\d+)">
+        <EventDetail />
+
+      </Route>
+      <Route path="/events/create">
+        <EventForm />
       </Route>
     </>
   )
