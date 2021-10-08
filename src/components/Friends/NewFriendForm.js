@@ -9,15 +9,18 @@ export const NewFriendForm = () => {
         userId: 0,
         currentUserId: 0
     });
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
 
     const [friends, setFriends] = useState([])
 
     const history = useHistory();
 
+
+
     const handleControlledInputChange = (event) => {
         const newFriend = { ...friend }
         let selectedVal = event.target.value
+
         
 
 
@@ -33,7 +36,7 @@ export const NewFriendForm = () => {
 
     useEffect(() => {
         getAllFriends().then(friends => {
-            setFriend(friends)
+            setFriends(friends)
         })
     }, []);
 
