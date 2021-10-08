@@ -10,6 +10,7 @@ import { FriendList } from "./Friends/FriendList"
 import { EventEditForm } from "./Events/EventEditForm"
 import { EventForm } from "./Events/EventForm"
 import { ArticleForm } from "./Articles/ArticleForm"
+import { NewFriendForm } from "./Friends/NewFriendForm"
 import { EventDetail } from "./Events/EventDetail";
 
 export const ApplicationViews = () => {
@@ -23,11 +24,16 @@ export const ApplicationViews = () => {
       <Route path="/articles/create">
         <ArticleForm />
       </Route>
+      
+
+      
 
       <Route path="/friends">
         {/* Render the component for list of friends */}
         <FriendList />
       </Route>
+
+
 
       <Route path="/messages">
         {/* Render the component for the messages */}
