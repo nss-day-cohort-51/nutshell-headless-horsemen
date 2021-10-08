@@ -8,7 +8,7 @@ export const TaskEditForm = () => {
 		name: "",
 		completed: false,
 		completeBy: "",
-		userId: 0
+		userId: 1
 	});
     const [isLoading, setIsLoading] = useState(false);
 

@@ -17,7 +17,7 @@ export const TaskList = () => {
 		});
 	};
 
-	const handleDelete = id => {
+	const handleDeleteTask = id => {
 		deleteTask(id)
 			.then(() => getAllTasks().then(setTasks));
 	};
@@ -40,7 +40,7 @@ export const TaskList = () => {
 
 		<div className="container-cards">
 			{tasks.map(task =>
-				<TaskCard key={task.id} task={task} handleDelete={handleDelete} />)}
+				<TaskCard key={task.id} task={task} handleDeleteTask={handleDeleteTask} />)}
 		</div>
 		</>
 	);
