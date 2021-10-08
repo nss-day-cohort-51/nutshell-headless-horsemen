@@ -35,3 +35,18 @@ export const deleteFriend = (id) => {
         body: JSON.stringify(newFriend)
     }).then(response => response.json())
   }
+
+  
+export const getNewFriend = (friendName) => {
+  return fetch(`${remoteURL}/users?name=${friendName}`)
+    .then(response => response.json())
+}
+
+  /*export const getNewFriend = () => {
+
+  if (friends.name === "")
+  .then (response => response.json())
+  else {window.alert "Please select valid friend"}
+
+
+  */

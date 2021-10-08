@@ -1,57 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { addFriend, getAllFriends } from "./FriendManager";
 import './NewFriendForm.css'
+import { getNewFriend } from "./FriendManager";
 
-export const NewFriendForm = () => {
-    const [friend, setFriend] = useState({
-        id: 0,
-        userId: 0,
-        currentUserId: 0
-    });
+
+
+// 
+export const NewFriendForm = ({getFriends}) => {
+
     // const [isLoading, setIsLoading] = useState(false);
 
-    const [friends, setFriends] = useState([])
-
-    const history = useHistory();
-
+    // friendname = text---setFriendName sets state variable
+    const [friendName, setFriendName] = useState("")
 
 
+// grabs value of friendname
     const handleControlledInputChange = (event) => {
-        const newFriend = { ...friend }
+        let newFriend =  friendName
         let selectedVal = event.target.value
 
         
 
+        newFriend = selectedVal
 
-
-        if (event.target.id.includes("Id")) {
-            selectedVal = parseInt(selectedVal)
-        }
-
-        newFriend[event.target.id] = selectedVal
-
-        setFriend(newFriend)
+        setFriendName(newFriend)
+        console.log(friendName)
     }
 
-    useEffect(() => {
-        getAllFriends().then(friends => {
-            setFriends(friends)
-        })
-    }, []);
+    
 
     const handleClickSaveFriend = (event) => {
         event.preventDefault()
+        getNewFriend(friendName).then( response => {
+            const newFriend = {
+                userId: response[0].id,
+                currentUserId: parseInt(sessionStorage.getItem('nutshell_user'))
 
-        const friendId = friend.friendId
-
-        if (friendId === 0) {
-            window.alert("Please select a friend")
-        } else {
-            addFriend(friend)
-                .then(() => history.push("/friends"))
+            }
+            addFriend(newFriend)
+            .then( () => {
+                getFriends()
+                setFriendName("")
+            }
+            )
         }
+        )
     }
+
 
     return (
         <form className="friendForm">
@@ -59,7 +54,7 @@ export const NewFriendForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">UserName:</label>
-                    <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Username" value={friend.name} />
+                    <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Username" value={friendName} />
                 </div>
                 <button className="btn btn-primary"
                     onClick={handleClickSaveFriend}>
