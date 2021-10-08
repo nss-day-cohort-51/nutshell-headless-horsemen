@@ -11,7 +11,7 @@ export const EventList = () => {
 
     const getEvents = () => {
         return getAllEvents().then(eventsFromAPI => {
-            console.log(eventsFromAPI);
+            //console.log(eventsFromAPI);
             setEvents(eventsFromAPI);
         });
     };
