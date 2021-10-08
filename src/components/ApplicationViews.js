@@ -31,10 +31,6 @@ export const ApplicationViews = () => {
       <Route path="/friends">
         {/* Render the component for list of friends */}
         <FriendList />
-      </Route>
-
-      <Route path="/friends/create">
-        {/* Render the component for list of friends */}
         <NewFriendForm />
       </Route>
 

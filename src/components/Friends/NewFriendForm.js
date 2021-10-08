@@ -4,33 +4,30 @@ import { addFriend, getAllFriends } from "./FriendManager";
 import './NewFriendForm.css'
 
 export const NewFriendForm = () => {
-
-
     const [friend, setFriend] = useState({
         id: 0,
         userId: 0,
         currentUserId: 0
     });
-
     const [isLoading, setIsLoading] = useState(false);
 
     const [friends, setFriends] = useState([])
-    const history = useHistory;
+
+    const history = useHistory();
 
     const handleControlledInputChange = (event) => {
-        /* When changing a state object or array,
-        always create a copy, make changes, and then set state.*/
         const newFriend = { ...friend }
         let selectedVal = event.target.value
-        // forms always provide values as strings. But we want to save the ids as numbers.
+        
+
+
+
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        /* Animal is an object with properties.
-        Set the property to the new value
-        using object bracket notation. */
+
         newFriend[event.target.id] = selectedVal
-        // update state
+
         setFriend(newFriend)
     }
 
