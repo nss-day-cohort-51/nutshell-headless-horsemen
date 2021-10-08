@@ -31,7 +31,7 @@ export const addEvent = (newEvent) => {
 
 
 export const update = (editedEvent) => {
-    return fetch(`${remoteURL}/animals/${editedEvent.id}`, {
+    return fetch(`${remoteURL}/events/${editedEvent.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

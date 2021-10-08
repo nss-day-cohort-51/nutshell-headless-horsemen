@@ -10,6 +10,7 @@ import { FriendList } from "./Friends/FriendList"
 import { EventEditForm } from "./Events/EventEditForm"
 import { EventForm } from "./Events/EventForm"
 import { ArticleForm } from "./Articles/ArticleForm"
+import { EventDetail } from "./Events/EventDetail";
 
 export const ApplicationViews = () => {
   return (
@@ -47,8 +48,14 @@ export const ApplicationViews = () => {
       <Route exact path="/events">
         <EventList />
       </Route>
+
       <Route exact path="/events/edit/:eventId(\d+)">
         <EventEditForm />
+      </Route>
+
+      <Route exact path="/events/:eventId(\d+)">
+        <EventDetail />
+
       </Route>
       <Route path="/events/create">
         <EventForm />
