@@ -9,7 +9,7 @@ export const TaskForm = () => {
 		name: "",
 		completed: false,
 		completeBy: "",
-		userId: 0
+		userId: 1
 	});
     const [isLoading, setIsLoading] = useState(false);
 
@@ -35,8 +35,8 @@ const constructNewTask = event => {
     }
 };
 
-const activeId = sessionStorage.getItem("activeUser")
-task.userId = parseInt(activeId)
+// const activeId = sessionStorage.getItem("activeUser")
+// task.userId = parseInt(activeId)
 
 return (
     <>
