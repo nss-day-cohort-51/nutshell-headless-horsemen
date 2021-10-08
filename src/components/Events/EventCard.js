@@ -19,6 +19,7 @@ export const EventCard = ({ event, handleDeleteEvent }) => {
                 onClick={() => history.push(`/events/edit/${event.id}`)}>
                 Edit
             </button>
+            <button type="button" className="btn-weather">Show weather</button>
         </section>
     )
 }
