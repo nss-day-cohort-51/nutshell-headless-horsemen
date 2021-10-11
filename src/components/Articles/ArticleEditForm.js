@@ -8,7 +8,7 @@ import { update } from "./ArticleManager"
 
 
 export const ArticleEditForm = () => {
-  const [article, setArticle] = useState({ url: "", title: "", synopsis:"", timestamp:"" });
+  const [article, setArticle] = useState({ url: "", title: "", synopsis:""});
   const [isLoading, setIsLoading] = useState(false);
 
   const {articleId} = useParams();
@@ -73,16 +73,6 @@ console.log(editedArticle)
 
             <input
               type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="timestamp"
-              value={article.timestamp}
-            />
-            <label htmlFor="timestamp">Timestamp</label>
-
-            <input
-              type="date"
               required
               className="form-control"
               onChange={handleFieldChange}

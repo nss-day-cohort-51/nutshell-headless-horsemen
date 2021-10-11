@@ -11,11 +11,12 @@ export const ArticleList = () => {
 
   const history = useHistory();
 
-  const getArticles = () => {
+  const getArticles = (activities) => {
     // After the data comes back from the API, we
     //  use the setAnimals function to update state
     return getAllArticles().then(articlesFromAPI => {
-      setArticles(articlesFromAPI)
+      const sortedActivities = articlesFromAPI.sort((a, b) => b.timestamp - a.timestamp)
+      setArticles(sortedActivities)
     });
   };
 
