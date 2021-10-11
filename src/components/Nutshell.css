@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
 strong {
   font-weight: bold;
 }
 
 body {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
+  background-image:url("../Images/hallowee.jpeg"); ;
+}
+
+h1 {
+  font-size: 2cm;
+  text-align: center;
+  font-family: Sigmar One, sans-serif;
+  color: rgb(185, 138, 51)
 }

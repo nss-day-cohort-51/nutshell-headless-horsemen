@@ -1,3 +1,6 @@
+// completed by Katie
+// form that show osn DOM when a user wants to create a new article
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addArticle } from './ArticleManager';

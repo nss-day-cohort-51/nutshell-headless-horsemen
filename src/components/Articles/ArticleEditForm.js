@@ -1,4 +1,5 @@
-// this is a component
+// completed by Katie
+// displays the edit form on the DOM to edit already submitted articles from current user
 
 import React, { useState, useEffect } from "react"
 import "./ArticleForm.css"
@@ -35,6 +36,7 @@ export const ArticleEditForm = () => {
 console.log(editedArticle)
      update(editedArticle)
     .then(() => history.push("/")
+    // history.push pushes this URL onto all the history in the DOM
     )
   }
 
