@@ -1,77 +1,29 @@
-# Reactive Nutshell: The Information Dashboard
+# Reactive Nutshell: Headless Horseman
+
+### Headless-Horseman explained
+
+Headless Horseman is a social media app that allows a user to communicate with another user via message. This app also allows users to post their favorite articles and events and share them with their friends through their feed. This app also allows users to keep track of there tasks with dates they would like to acheive them by.
 
 ## Setup: Follow these steps exactly
 
-1. Clone this repository
-1. `cd` into the directory it creates
-1. In the `api` directory, create a copy of the `database.json.example` and remove the `.example` extension.
-1. Run `json-server -p 8088 -w database.json` from the `api` directory.
-1. Run `npm install` and wait for all dependencies to be installed.
-1. Run `npm start` to verify that installation was successful.
+1. Open the terminal and clone the repository `https://github.com/nss-day-cohort-51/nutshell-headless-horsemen`.
+1. In order to begin serving the project `cd` into `Nutshell-Headless-Horseman`.
+1. Type `npm install` and wait for all dependencies to be installed.
+1. After installing the dependencies, in the Nutshell-Headless-Horseman directory run `npm start` to serve on your local host.
+1. In a separate window in the temrinal `cd` into `Nutshell-Headless-Horseman`.
+1. `cd` into `api/` and type `json-sever -p 8088 -w database.json`.
+1. Serve `localhost:8088` in the web browser so retrieve data in database.
 
-> **Note:** Your `database.json` file is already in the `.gitignore` file for this project, so it will never be added to the repo or pushed to Github.
+## How to navigate Nutshell-Headless-Horseman
 
-## What is Reactive Nutshell?
+Upon serving the correct hosts through your browser, you will be prompted with an option to sign in or register as anew user. You will need to register as a new user.
 
-Nutshell is a new product offering that you have been tasked with building. It's an app for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+After creating your account, you will notice five nav bar selections allowing users to navigate to articles, tasks, friends, messages or events.
 
-You will be using the React library to build out this application.
+You can begin growing your feed by creating new articles , tasks or events by selecting the "Create New" button on each respective options page.
 
-To start you off, here's an example of what some of the resources in your API should look like once it's populated with some data from your application.
+Once you have created a few entries of your own you can reach out to others by adding them as friends. This can be done under the friends link. Simply type in someone you would like to have as a friend and if available they will be added to your "friends" database. You will be prompted with a web alert if your desired friend is not available.
 
-### Users
+## Documentation
 
-```json
-{ "id": 1, "name": "Steve Brownlee", "email": "me@me.com" }
-```
-
-### Friends
-
-```json
-{ "id": 1, "userId": 1, "currentUserId": 3 }
-```
-
-### News Articles
-
-```json
-{
-    "id": 1,
-    "userId": 2,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about workholes",
-    "timestamp": "2021-02-11T15:24"
-}
-```
-
-## Professional Requirements
-
-1. All teammates must use React and JSON-server. 
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
-1. The README for your project should include instructions on how another person can download and run the application
-1. An ERD showing the database relationships. A screenshot/image should be included on your README.
-
-## A Note About Authentication
-
-We want you to know that the login and registration code we have given you is fake, completely insecure, and would never be implemented in a professional application. It is a simulation authentication using very simplistic tools, because authentication is not a learning objective of students at NSS.
-
-You will be using [session storage](https://javascript.info/localstorage#sessionstorage) to keep track of which user has logged into Nutshell. You need to read the code in the **`Login.js`** and **`Register.js`** components so that you see what is going on, but you do not need to change it.
-
-## Keep in mind some tips for a good usable app
-1. Use acceptable conventions
-   * Logo positioned at top left
-   * Navigation across the top or down the left side
-2. Visual hierarchy
-   * Most important information is the most prominent
-3. Break pages up into defined sections
-   * Logically related content should be related visually
-4. That which is clickable should be obviously clickable.
-5. Eliminate distractions
-   * Use only two typefaces
-   * Limit color pallet (3 colors with black and white)
-   * Use a grid
-6. Support scanning (users don't read)
-   * Use plenty of headings
-   * Short paragraphs
-   * Bulleted lists
-7. Strive for consistency.
+| [dbdiagram](./src/Images/dbdiagram.png) | [wireframe](./src/Images/wireframe-headless-horseman.png) 
