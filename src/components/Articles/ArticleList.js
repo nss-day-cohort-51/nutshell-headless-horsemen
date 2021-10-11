@@ -1,3 +1,6 @@
+// completed by katie
+// display of all articles on the DOM
+
 import React, { useState, useEffect } from 'react';
 //import the components we will need
 import { ArticleCard } from './ArticleCard';

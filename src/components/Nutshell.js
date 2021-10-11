@@ -14,6 +14,8 @@ export const Nutshell = () => (
         if (sessionStorage.getItem("nutshell_user")) {
           return (
             <>
+            <img src="../Images/HH_logo.png"></img>
+            <h1>Headless Horseman Social</h1>
               <NavBar />
               <ApplicationViews />
             </>
