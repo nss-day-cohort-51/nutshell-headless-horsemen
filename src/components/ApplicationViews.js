@@ -26,9 +26,6 @@ export const ApplicationViews = () => {
         <ArticleForm />
       </Route>
 
-
-
-
       <Route exact path="/articles/:articleId(\d+)/edit">
         <ArticleEditForm />
       </Route>
@@ -37,8 +34,6 @@ export const ApplicationViews = () => {
         {/* Render the component for list of friends */}
         <FriendList />
       </Route>
-
-
 
       <Route path="/messages">
         {/* Render the component for the messages */}

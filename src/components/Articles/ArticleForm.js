@@ -1,3 +1,6 @@
+// completed by Katie
+// form that show osn DOM when a user wants to create a new article
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addArticle } from './ArticleManager';
@@ -10,7 +13,7 @@ export const ArticleForm = () => {
 	const [article, setArticle] = useState({
 		title: "",
 		synopsis: "",
-        timestamp:"",
+        timestamp:Date.now(),
         URL: "",
 	});
 
@@ -61,12 +64,6 @@ export const ArticleForm = () => {
 				<div className="form-group">
 					<label htmlFor="synopsis">Synopsis:</label>
 					<input type="text" id="synopsis" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Synopsis" value={article.synopsis} />
-				</div>
-			</fieldset>
-            <fieldset>
-				<div className="form-group">
-					<label htmlFor="timestamp">Timestamp:</label>
-					<input type="date" id="timestamp" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Timestamp" value={Date.now(article.timestamp)} />
 				</div>
 			</fieldset>
             <fieldset>

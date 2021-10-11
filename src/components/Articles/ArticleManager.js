@@ -1,3 +1,6 @@
+// completed by katie
+// all fetch calls to api to complete neccesary actions on the DOM
+
 const remoteURL = "http://localhost:8088"
 
 export const getArticleById = (articleId) => {

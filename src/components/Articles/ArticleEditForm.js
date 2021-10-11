@@ -1,4 +1,5 @@
-// this is a component
+// completed by Katie
+// displays the edit form on the DOM to edit already submitted articles from current user
 
 import React, { useState, useEffect } from "react"
 import "./ArticleForm.css"
@@ -8,7 +9,7 @@ import { update } from "./ArticleManager"
 
 
 export const ArticleEditForm = () => {
-  const [article, setArticle] = useState({ url: "", title: "", synopsis:"", timestamp:"" });
+  const [article, setArticle] = useState({ url: "", title: "", synopsis:""});
   const [isLoading, setIsLoading] = useState(false);
 
   const {articleId} = useParams();
@@ -35,6 +36,7 @@ export const ArticleEditForm = () => {
 console.log(editedArticle)
      update(editedArticle)
     .then(() => history.push("/")
+    // history.push pushes this URL onto all the history in the DOM
     )
   }
 
@@ -73,16 +75,6 @@ console.log(editedArticle)
 
             <input
               type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="timestamp"
-              value={article.timestamp}
-            />
-            <label htmlFor="timestamp">Timestamp</label>
-
-            <input
-              type="date"
               required
               className="form-control"
               onChange={handleFieldChange}
