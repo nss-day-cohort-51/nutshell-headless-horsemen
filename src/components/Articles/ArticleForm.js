@@ -7,7 +7,7 @@ import { addArticle } from './ArticleManager';
 import "./ArticleForm.css"
 
 export const ArticleForm = () => {
-	// State will contain both animal data as well as an isLoading flag.
+	// State will contain both article data as well as an isLoading flag.
 	// Define the initial state of the form inputs with useState()
 
 	const [article, setArticle] = useState({
@@ -18,8 +18,6 @@ export const ArticleForm = () => {
 	});
 
 	const [isLoading, setIsLoading] = useState(false);
-
-	// you will need the the `getAll` in the LocationsManager and CustomersManager to complete this section
 
 	const history = useHistory();
 
@@ -36,7 +34,7 @@ export const ArticleForm = () => {
 		if (event.target.id.includes("Id")) {
 			selectedVal = parseInt(selectedVal)
 		}
-		/* Animal is an object with properties.
+		/* Article is an object with properties.
 		Set the property to the new value
 		using object bracket notation. */
 		newArticle[event.target.id] = selectedVal

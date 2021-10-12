@@ -2,7 +2,6 @@
 // display of all articles on the DOM
 
 import React, { useState, useEffect } from 'react';
-//import the components we will need
 import { ArticleCard } from './ArticleCard';
 import {  getAllArticles, deleteArticle } from './ArticleManager';
 import "./ArticleList.css"
@@ -16,7 +15,7 @@ export const ArticleList = () => {
 
   const getArticles = (activities) => {
     // After the data comes back from the API, we
-    //  use the setAnimals function to update state
+    //  use the setArticles function to update state
     return getAllArticles().then(articlesFromAPI => {
       const sortedActivities = articlesFromAPI.sort((a, b) => b.timestamp - a.timestamp)
       setArticles(sortedActivities)
@@ -28,13 +27,13 @@ export const ArticleList = () => {
     .then(() => getAllArticles().then(setArticles));
   };
 
-  // got the animals from the API on the component's first render
+  // got the articles from the API on the component's first render
   useEffect(() => {
       console.log("useEffect running")
     getArticles();
   }, []);
 
-  // Finally we use .map() to "loop over" the animals array to show a list of animal cards
+  // Finally we use .map() to "loop over" the animals array to show a list of article cards
   return (
     <>
     <section className="section-content">

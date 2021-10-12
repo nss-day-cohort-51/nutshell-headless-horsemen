@@ -8,7 +8,7 @@ fieldset {
     border: 0 none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
-    background: rgb(131, 177, 207);
+    background: rgb(161, 106, 106);
 }
 
 fieldset input, fieldset button, fieldset select{
@@ -23,7 +23,7 @@ fieldset button {
     max-width: 9em;
     padding: .5em;
     margin: .3em auto;
-    background-color: rgb(131, 177, 207);
+    background-color: rgb(161, 106, 106);
     border: none;
     color: cornsilk;
     text-align: center;

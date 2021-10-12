@@ -17,9 +17,9 @@ export const EventCard = ({ event, handleDeleteEvent }) => {
             <div className="event__date">{getReadableDate(event.date)}</div>
             <button type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
             <Link to={`/events/${event.id}`}>
-                <button>Details</button>
+                <button className="details-button-event">Details</button>
             </Link>
-            <button type="button"
+            <button className="edit-button-event" type="button"
                 onClick={() => history.push(`/events/edit/${event.id}`)}>
                 Edit
             </button>

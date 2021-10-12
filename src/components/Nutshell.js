@@ -6,6 +6,7 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./Nutshell.css"
 import { ArticleCard } from "./Articles/ArticleCard"
+import  logo from "../Images/HH_logo2.png.png"
 
 export const Nutshell = () => (
   <>
@@ -14,7 +15,7 @@ export const Nutshell = () => (
         if (sessionStorage.getItem("nutshell_user")) {
           return (
             <>
-            <img src="../Images/HH_logo.png"></img>
+            <img className="logo" src={logo}></img>
             <h1>Headless Horseman Social</h1>
               <NavBar />
               <ApplicationViews />
