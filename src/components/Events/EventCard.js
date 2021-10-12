@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 
 export const EventCard = ({ event, handleDeleteEvent }) => {
+
     const history = useHistory();
+    const getReadableDate = (date) => {
+        return new Date(date).toLocaleDateString();
+    }
     return (
 
         <section className="event">
             <h3 className="event__name">{event.name}</h3>
             <div className="event__location">{event.location}</div>
-            <div className="event__date">{event.date}</div>
+            <div className="event__date">{getReadableDate(event.date)}</div>
             <button type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
             <Link to={`/events/${event.id}`}>
                 <button>Details</button>
