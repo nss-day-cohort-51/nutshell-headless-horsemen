@@ -1,3 +1,4 @@
+// Completed By Devery
 import React, { useState, useEffect } from "react";
 import { addFriend, getAllFriends } from "./FriendManager";
 import './NewFriendForm.css'

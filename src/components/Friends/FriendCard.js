@@ -1,9 +1,8 @@
+// Completed By Devery
 import React from "react";
 import "./Friend.css";
-import { Link, useHistory } from "react-router-dom";
 
 export const FriendCard = ({friend, handleDeleteFriend}) => {
-    const history = useHistory();
     return (
         <div className="card">
             <div className="card-content">
