@@ -17,7 +17,3 @@ export const TaskCard = ({ task, handleDeleteTask }) => {
         </section>
     )
 }
-
-
-
-//

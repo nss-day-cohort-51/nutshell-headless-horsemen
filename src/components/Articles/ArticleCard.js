@@ -20,7 +20,7 @@ export const ArticleCard = ({article, handleDeleteArticle}) => {
         <div className="content">
         <p className="synopsis">{article.synopsis}</p>
         <p className="timestamp">{getReadableDate(article.timestamp)}</p>
-        <a href={article.url} target="_blank">View website</a>
+        <a className="url_button"href={article.url} target="_blank">View website</a>
         <div className="delete-article">
         <button type="button-delete" onClick={() => handleDeleteArticle(article.id)}>Delete Article</button>
         </div>

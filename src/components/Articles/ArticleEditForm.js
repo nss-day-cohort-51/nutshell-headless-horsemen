@@ -11,10 +11,11 @@ import { update } from "./ArticleManager"
 export const ArticleEditForm = () => {
   const [article, setArticle] = useState({ url: "", title: "", synopsis:""});
   const [isLoading, setIsLoading] = useState(false);
-
+// "isLoading" is showing user data is being loaded but is not fully loaded yet
   const {articleId} = useParams();
+  // useParams lets you access parameters of current <route>
   const history = useHistory();
-
+// useHistory all the URL visited on DOM
   const handleFieldChange = evt => {
     const stateToChange = { ...article };
     stateToChange[evt.target.id] = evt.target.value;
@@ -39,7 +40,7 @@ console.log(editedArticle)
     // history.push pushes this URL onto all the history in the DOM
     )
   }
-
+// useEffect tells react component it needs to do something after rendering
   useEffect(() => {
    getArticleById(articleId)
       .then(article => {
