@@ -1,3 +1,5 @@
+// Worked on by Ben
+
 import React, { useState, useEffect } from "react"
 import { update, getTaskById } from "./TaskManager"
 import "./TaskForm.css"
@@ -10,21 +12,27 @@ export const TaskEditForm = () => {
 		completeBy: "",
 		userId: 1
 	});
+
+// shows user data is being loaded but is not fully loaded yet
     const [isLoading, setIsLoading] = useState(false);
 
+// lets you access parameters of current <route>
   const {taskId} = useParams();
+// all the URL visited on DOM
   const history = useHistory();
 
+//allows for inputting the info for a task
   const handleFieldChange = event => {
     const stateToChange = { ...task };
     stateToChange[event.target.id] = event.target.value;
     setTask(stateToChange);
+    console.log("here i am")
   };
 
+//gets id of task for editing and prevents HTML from displaying to DOM
   const updateExistingTask = event => {
     event.preventDefault()
     setIsLoading(true);
-
   
     const editedTask = {
       id: taskId,
@@ -33,8 +41,11 @@ export const TaskEditForm = () => {
       completed: task.completed
     };
     
+
+//function that puts edited task onto the DOM
   update(editedTask)
     .then(() => history.push("/tasks"))  
+//prevents edited task from displaying unless all input fields have something in them
     if (task.name === "" || task.completeBy === 0) {
         window.alert("Please complete all fields");
     } else {
@@ -42,7 +53,7 @@ export const TaskEditForm = () => {
         setIsLoading(false)
     }
   }
-
+//tells react component it needs to do something after rendering
     useEffect(() => {
     getTaskById(taskId)
       .then(task => {
@@ -50,9 +61,6 @@ export const TaskEditForm = () => {
         setIsLoading(false);
       });
   }, []);
-
-  const activeId = sessionStorage.getItem("activeUser")
-task.userId = parseInt(activeId)
 
 
   return (
