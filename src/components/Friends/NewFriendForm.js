@@ -49,7 +49,7 @@ export const NewFriendForm = ({getFriends}) => {
 
     return (
         <form className="friendForm">
-            <h2 className="friendForm__title">New Friend</h2>
+            <h2 className="friendForm__title">New Friend:</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">UserName:</label>

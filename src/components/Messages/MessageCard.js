@@ -8,7 +8,7 @@ export const MessageCard = ({message, handleDeleteMessage}) => {
         <div className="message_card">
         <div className="message_card_content">
         <h4>{message.userId}</h4>
-        <p>{message.message}</p>
+        <p className="message_message" >{message.message}</p>
         <button type="button-delete" onClick={() => handleDeleteMessage(message.id)}>Delete</button>
         <Link to={`/messages/${message.id}/edit`}>
             <button className="edit_button">Edit</button>
