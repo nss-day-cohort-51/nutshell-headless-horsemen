@@ -1,17 +1,15 @@
-import React from "react"
-import "./Messege.css"
-import { useHistory } from "react-router";
+import React from "react";
+import "./Message.css";
 
-export const MessageCard = () => {
-
-    const history = useHistory();
+export const MessageCard = ({message, handleDeleteMessage}) => {
 
     return (
-
-        <section className="messege">
-            <h3 className="messege__name">{message.name}</h3>
-            <button type="button" onClick={() => handleDeleteEvent(message.id)}>Delete</button>
-
-        </section>
+        <div className="message_card">
+        <div className="message_card_content">
+        <h4>{message.userId}</h4>
+        <p>{message.message}</p>
+        <button type="button-delete" onClick={() => handleDeleteMessage(message.id)}>Delete</button>
+        </div>
+        </div>
     )
 }
