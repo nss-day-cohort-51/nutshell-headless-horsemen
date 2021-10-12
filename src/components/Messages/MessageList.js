@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { MessageCard } from "./MessageCard";
 import { getAllMessages, deleteMessage } from "./MessageManager";
 import { useHistory } from "react-router";
+import { MessageForm } from "./MessageForm";
 
 export const MessageList = () => {
     const [messages, setMessages] = useState([]);
@@ -27,11 +28,7 @@ export const MessageList = () => {
     return (
         <>
         <section className="section-content">
-        <button type="button"
-          className="btn"
-          onClick={() => {history.push("/messages/create")}}>
-          Create new Message
-        </button>
+        <MessageForm getMessages={getMessages}/>
       </section>
         <div className="messages__card">
           {messages.map(message => <MessageCard key={message.id} message={message} handleDeleteMessage={handleDeleteMessage}/>

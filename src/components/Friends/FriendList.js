@@ -26,9 +26,6 @@ export const FriendList = () => {
         <>
         <div className="container-cards">
             <section className="section-content">
-                <button type="button">
-
-                </button>
             </section>
 
             {friends?.map(friend => <FriendCard key={friend.id} friend={friend} handleDeleteFriend={handleDeleteFriend} />)}

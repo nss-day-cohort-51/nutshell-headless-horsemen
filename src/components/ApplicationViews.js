@@ -14,6 +14,7 @@ import { ArticleEditForm } from "./Articles/ArticleEditForm";
 import { NewFriendForm } from "./Friends/NewFriendForm"
 import { EventDetail } from "./Events/EventDetail";
 import { MessageList } from "./Messages/MessageList";
+import { MessageForm } from "./Messages/MessageForm";
 
 export const ApplicationViews = () => {
   return (
@@ -40,6 +41,10 @@ export const ApplicationViews = () => {
         {/* Render the component for the messages */}
         <MessageList />
       </Route>
+
+      {/* <Route path="/messages/create">
+        <MessageForm />
+      </Route> */}
 
       <Route path="/tasks/create">
         <TaskForm />
