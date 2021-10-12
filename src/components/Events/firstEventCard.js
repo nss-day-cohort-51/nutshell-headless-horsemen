@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 
 export const FirstEventCard = ({ event, handleDeleteEvent }) => {
+
     const history = useHistory();
     const getReadableDate = (date) => {
-        return new Date(date).toLocaleDateString();
+        console.log(new Date(date.replace(/-/g, '\/')))
+        const ReadableDate = new Date(date.replace(/-/g, '\/')).toLocaleDateString();
+        return ReadableDate
     }
     return (
 

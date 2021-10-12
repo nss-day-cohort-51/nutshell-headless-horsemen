@@ -12,7 +12,7 @@ export const EventList = () => {
 
     const getEvents = () => {
         return getAllEvents().then(eventsFromAPI => {
-            const sortedEvents = eventsFromAPI.sort((a, b) => b.date - a.date)
+            const sortedEvents = eventsFromAPI.sort((a, b) => new Date(a.date) - new Date(b.date))
             //console.log(eventsFromAPI);
             setEvents(sortedEvents);
         });
@@ -24,13 +24,14 @@ export const EventList = () => {
     useEffect(() => {
 
         const pastEvents = events.filter(event => {
-            return new Date(event.date).toLocaleDateString() < new Date().toLocaleDateString();
+            return new Date(event.date + "T00:00:00").getTime() < new Date().getTime();
 
         });
         setFilteredPastEvents(pastEvents);
 
         const futureEvents = events.filter(event => {
-            return new Date(event.date).toLocaleDateString() >= new Date().toLocaleDateString();
+
+            return new Date(event.date + "T00:00:00").getTime() >= new Date().getTime();
         });
         setFilteredFutureEvents(futureEvents);
 
@@ -61,7 +62,7 @@ export const EventList = () => {
 
             <div className="container-cards">
                 {filteredFuture.map(event => {
-
+                    console.log(filteredFuture)
                     if (filteredFuture.indexOf(event) !== 0) {
                         return <EventCard key={event.id} event={event} handleDeleteEvent={handleDeleteEvent} />
                     } else {
