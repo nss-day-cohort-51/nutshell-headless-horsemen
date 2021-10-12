@@ -1,5 +1,8 @@
-const remoteURL = "http://localhost:8088"
 
+// completed by Tessema
+// fetech calls from API to get different info from the database
+const remoteURL = "http://localhost:8088"
+//
 export const getEventById = (eventId) => {
     return fetch(`${remoteURL}/events/${eventId}?_expand=user`)
         .then(res => res.json())

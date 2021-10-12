@@ -1,3 +1,6 @@
+// completed by Tessema
+
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addEvent } from './EventManager';
@@ -42,12 +45,6 @@ export const EventForm = () => {
         setEvent(newEvent)
     }
 
-    // useEffect(() => {
-    //     //load location data and setState
-    //     getAllEvents().then(events => {
-    //         setEvents(events)
-    //     })
-    // }, []);
 
 
 

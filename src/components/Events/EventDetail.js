@@ -1,3 +1,5 @@
+// completed by Tessema
+
 import React, { useState, useEffect } from 'react';
 import { getEventById, deleteEvent } from './EventManager';
 import './EventDetail.css';
@@ -8,11 +10,11 @@ export const EventDetail = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const { eventId } = useParams();
-    const history = useHistory();
+    const history = useHistory(); //redirect user to another page
 
 
     const handleDelete = () => {
-        //invoke the delete function in EventManger and re-direct to the animal list.
+        //invoke the delete function in EventManger and re-direct to the event list.
         setIsLoading(true);
         deleteEvent(eventId).then(() =>
             history.push("/events")

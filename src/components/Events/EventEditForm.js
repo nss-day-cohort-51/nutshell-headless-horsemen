@@ -1,9 +1,12 @@
+// completed by Tessema
+
 import React, { useState, useEffect } from "react"
 import { getEventById, update } from "./EventManager"
 import "./EventEditForm.css"
 import { useParams, useHistory } from "react-router"
 
 export const EventEditForm = () => {
+    // set initail state by setting empty string 
     const [event, setEvent] = useState({ name: "", location: "", date: "" });
     const [isLoading, setIsLoading] = useState(false);
 
@@ -34,7 +37,7 @@ export const EventEditForm = () => {
             .then(() => history.push("/events")
             )
     }
-
+    //useEffect render after the state changes
     useEffect(() => {
         getEventById(eventId)
             .then(event => {

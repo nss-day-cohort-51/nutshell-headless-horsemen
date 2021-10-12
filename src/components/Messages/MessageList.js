@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { getAlls, deleteAnimal } from '../../modules/AnimalManager';
+import { AnimalCard } from './AnimalCard';
+import { useHistory } from 'react-router';
+
+export const AnimalList = () => {
+
+    const [animals, setAnimals] = useState([]);
+    const history = useHistory();
+
+    const getAnimals = () => {
+        return getAllAnimals().then(animalsFromAPI => {
+            // We'll do something more interesting with this data soon.
+            console.log(animalsFromAPI);
+            setAnimals(animalsFromAPI);
+        });
+    };
+
+
+    const handleDeleteAnimal = id => {
+        deleteAnimal(id)
+            .then(() => getAllAnimals().then(setAnimals));
+    };
+
+
+
+
+    useEffect(() => {
+        getAnimals();
+=======
 import React, {useState, useEffect} from "react";
 import { MessageCard } from "./MessageCard";
 import { getAllMessages, deleteMessage } from "./MessageManager";
@@ -24,10 +55,29 @@ export const MessageList = () => {
 
     useEffect(() => {
         getMessages();
+>>>>>>> main
     }, []);
 
     return (
         <>
+<<<<<<< HEAD
+
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => { history.push("/animals/create") }}>
+                    Admit Animal
+                </button>
+            </section>
+
+            <div className="container-cards">
+                {animals.map(animal => <AnimalCard animal={animal} handleDeleteAnimal={handleDeleteAnimal} />)}
+            </div>
+        </>
+    );
+};
+
+=======
         <section className="section-content">
         <MessageForm getMessages={getMessages}/>
       </section>
@@ -38,3 +88,4 @@ export const MessageList = () => {
         </>
     )
 }
+>>>>>>> main

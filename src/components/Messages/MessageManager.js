@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const remoteURL = "http://localhost:8088"
 
 export const getMessageById = (messageId) => {
@@ -36,3 +38,4 @@ export const update = (messageObj) => {
 		body: JSON.stringify(messageObj)
 	}).then(data => data.json());
 }
+>>>>>>> main
