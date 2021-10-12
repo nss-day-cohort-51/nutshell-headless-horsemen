@@ -1,5 +1,6 @@
 import React from "react";
 import "./Message.css";
+import { Link } from "react-router-dom";
 
 export const MessageCard = ({message, handleDeleteMessage}) => {
 
@@ -9,6 +10,9 @@ export const MessageCard = ({message, handleDeleteMessage}) => {
         <h4>{message.userId}</h4>
         <p>{message.message}</p>
         <button type="button-delete" onClick={() => handleDeleteMessage(message.id)}>Delete</button>
+        <Link to={`/messages/${message.id}/edit`}>
+            <button className="edit_button">Edit</button>
+          </Link>
         </div>
         </div>
     )

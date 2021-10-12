@@ -3,6 +3,7 @@ import { MessageCard } from "./MessageCard";
 import { getAllMessages, deleteMessage } from "./MessageManager";
 import { useHistory } from "react-router";
 import { MessageForm } from "./MessageForm";
+import { MessageEditForm } from "./MessageEditForm";
 
 export const MessageList = () => {
     const [messages, setMessages] = useState([]);
