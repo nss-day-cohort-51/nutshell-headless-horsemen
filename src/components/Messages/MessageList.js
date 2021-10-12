@@ -1,4 +1,6 @@
+
 // Completed By Devery
+
 import React, {useState, useEffect} from "react";
 import { MessageCard } from "./MessageCard";
 import { getAllMessages, deleteMessage } from "./MessageManager";
@@ -28,10 +30,12 @@ export const MessageList = () => {
     // tells react component to get messages after react has rendered then sets state
     useEffect(() => {
         getMessages();
+
     }, []);
 
     return (
         <>
+
         <section className="section-content">
         <MessageForm getMessages={getMessages}/>
       </section>
@@ -42,3 +46,4 @@ export const MessageList = () => {
         </>
     )
 }
+
