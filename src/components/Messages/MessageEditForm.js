@@ -1,4 +1,4 @@
-
+// Completed By Devery
 import React, { useState, useEffect } from "react"
 import { useParams, useHistory } from "react-router-dom"
 import { getMessageById } from "./MessageManager"
@@ -11,7 +11,7 @@ export const MessageEditForm = ({getMessages}) => {
   const {messageId} = useParams();
   // useParams lets you access parameters of current <route>
   const history = useHistory();
-// useHistory all the URL visited on DOM
+// useHistory all the messages visited on DOM
   const handleFieldChange = evt => {
     const stateToChange = { ...message };
     stateToChange[evt.target.id] = evt.target.value;

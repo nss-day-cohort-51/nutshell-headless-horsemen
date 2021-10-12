@@ -1,14 +1,13 @@
+// Completed By Devery
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import { addMessage } from './MessageManager';
 
-
+// uses get messages to auto update browser when message form is called
 export const MessageForm = ({getMessages}) => {
     const [message, setMessage] = useState({
 		message: "",
 	});
 
-    const history = useHistory();
 
     const handleControlledInputChange = (event) => {
         const newMessage = {...message}
