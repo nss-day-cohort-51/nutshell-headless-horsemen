@@ -1,3 +1,5 @@
+// completed by Tessema
+
 import React from "react"
 import "./Event.css"
 import { Link } from "react-router-dom";
@@ -6,6 +8,7 @@ import { useHistory } from "react-router";
 export const FirstEventCard = ({ event, handleDeleteEvent }) => {
 
     const history = useHistory();
+    // make the date human readable
     const getReadableDate = (date) => {
         console.log(new Date(date.replace(/-/g, '\/')))
         const ReadableDate = new Date(date.replace(/-/g, '\/')).toLocaleDateString();
