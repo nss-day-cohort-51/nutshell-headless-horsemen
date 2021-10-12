@@ -58,6 +58,9 @@
     margin-left: 1em;
   }
 
+  .btn-weather {
+    /* margin-left: 35%; */
+  }
   .first_event {
     background-color: darkgrey;
     border-style: solid;
