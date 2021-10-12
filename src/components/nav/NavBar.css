@@ -20,25 +20,17 @@
  
 }
 
-/* html {
-    background-color: lightgrey;
-} */
-/* 
-.navbar_txt {
-    color: rgb(231, 142, 58);
-} 
-
-a:link {
+ a:link {
     color: rgb(231, 142, 58);
     background-color: transparent;
     text-decoration: none;
-  }
+  } 
 
   a:visited {
     color: black;
     background-color: transparent;
     text-decoration: none;
-  } */
+  } 
 
   a:hover {
     color: grey;
@@ -49,4 +41,4 @@ a:link {
   a.nav-link {
     color:white;
   }
-  
+ 

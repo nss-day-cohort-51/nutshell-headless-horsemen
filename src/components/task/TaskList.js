@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getAllTasks, deleteTask } from './TaskManager';
 import { TaskCard } from './TaskCard';
 import { useHistory } from "react-router-dom"
+import "./Task.css"
 
 export const TaskList = () => {
 	console.log("TaskList Invoked")
@@ -31,7 +32,7 @@ export const TaskList = () => {
 	return (
 		<>
 		<section className="section-content">
-  		<button type="button"
+  		<button className="add-task" type="button"
       className="btn"
       onClick={() => {history.push("/tasks/create")}}>
       Add Task
