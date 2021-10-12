@@ -27,7 +27,7 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route exact path="/articles/:articleId(\d+)/edit">
-         <ArticleEditForm /> 
+        <ArticleEditForm />
       </Route>
 
       <Route path="/friends">
