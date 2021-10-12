@@ -1,8 +1,10 @@
+//Worked on by Ben
+
 import React from "react"
 import { useHistory } from "react-router-dom"
 import "./Task.css"
 
-
+// holds HTML for DOM and accesses task information from api
 export const TaskCard = ({ task, handleDeleteTask }) => {
     const history = useHistory();
 
