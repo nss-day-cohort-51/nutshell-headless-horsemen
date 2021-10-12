@@ -1,18 +1,4 @@
 
-/* .events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .event {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
-<<<<<<< HEAD
-  } */
-
   .event {
     background: rgb(161, 106, 106);
     border-style: solid;
@@ -75,15 +61,68 @@
 
   .btn-weather {
     /* margin-left: 35%; */
-=======
   }
+
   .first_event {
-      font-weight: bold;
-      font-size:  20px ;
-      background-color: antiquewhite;
+    background-color: darkgrey;
+    border-style: solid;
+    margin-top: 1%;
+    border-width: .5em;
+    border-color: grey;
+    margin-right: 70%;
+    margin-bottom: 1.5cm;
   }
+
   .first_event__name {
-      font-size: 35px;
-      font-weight: bold;
->>>>>>> 0bd0c57633f7539229d4896723780502a76b063d
+    font-weight: bold;
+    font-size: 1.2cm;
+    text-align: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    margin-top: .5em;
+    padding-bottom: .3em;
+  }
+
+  .first_event__location {
+    margin-left: 1em;
+    font-size: .6cm;
+    font-weight: bold;
+  }
+
+  .first_event__date {
+    margin-left: 1em;
+    font-size: .6cm;
+    font-weight: bold;
+  }
+ 
+  .btn-delete {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+     border-style: solid;
+     border-color: white;
+     margin-right: 1em;
+     font-weight: bold;
+  }
+
+  .btn-details {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+     border-style: solid;
+     border-color: white;
+     margin-right: 1em;
+     font-weight: bold;
+  }
+
+  .btn-edit {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+     border-style: solid;
+     border-color: white;
+     margin-right: 1em;
+     font-weight: bold; 
   }
