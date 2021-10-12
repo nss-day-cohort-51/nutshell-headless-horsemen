@@ -7,7 +7,7 @@ export const FriendCard = ({friend, handleDeleteFriend}) => {
     return (
         <div className="card">
             <div className="card-content">
-                <h4>{friend?.user.name}</h4>
+                <h4 className="friend_name">{friend?.user.name}</h4>
                 <button type="button" onClick={() => handleDeleteFriend(friend.id)}>Delete Friend</button>
             </div>
         </div>

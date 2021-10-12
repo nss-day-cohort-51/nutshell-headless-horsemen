@@ -11,11 +11,11 @@ export const EventCard = ({ event, handleDeleteEvent }) => {
             <h3 className="event__name">{event.name}</h3>
             <div className="event__location">{event.location}</div>
             <div className="event__date">{event.date}</div>
-            <button type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
+            <button className="delete-button-event" type="button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
             <Link to={`/events/${event.id}`}>
-                <button>Details</button>
+                <button className="details-button-event">Details</button>
             </Link>
-            <button type="button"
+            <button className="edit-button-event" type="button"
                 onClick={() => history.push(`/events/edit/${event.id}`)}>
                 Edit
             </button>

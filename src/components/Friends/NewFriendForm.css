@@ -1,4 +1,4 @@
-fieldset {
+/* fieldset {
     max-width: 40em;
     padding: 4px;
     margin: 2em auto;
@@ -58,4 +58,20 @@ fieldset input, fieldset button, fieldset select {
 
 fieldset .alignRight {
     text-align: right;
+}
+ */
+
+
+/* .friendForm {
+    padding-left: 40%;
+    margin-top: -20%;
+} */
+.friendForm {
+padding-left: 3%;
+margin-top: 2cm;
+background-color: rgb(185, 138, 51);
+margin-right: 55%;
+border-style: solid;
+border-color: darkgrey;
+border-width: .5em;
 }
