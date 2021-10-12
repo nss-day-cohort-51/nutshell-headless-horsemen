@@ -6,25 +6,23 @@ import { addEvent } from './EventManager';
 
 
 export const EventForm = () => {
-    // State will contain both animal data as well as an isLoading flag.
+
     // Define the initial state of the form inputs with useState()
 
     const [event, setEvent] = useState({
         name: "",
         location: "",
         date: "",
-
+        userId: parseInt(sessionStorage.getItem("nutshell_user"))
     });
 
 
-
-    // you will need the the `getAll` in the LocationsManager and CustomersManager to complete this section
 
 
     const history = useHistory();
 
     //when a field changes, update state. The return will re-render and display based on the values in state
-    // NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
+    // NOTE! What's happening in this function can be very difficult to grasp. 
     //Controlled component
 
     const handleControlledInputChange = (evt) => {
@@ -36,7 +34,7 @@ export const EventForm = () => {
         if (evt.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        /* Animal is an object with properties.
+        /* Event is an object with properties.
         Set the property to the new value
         using object bracket notation. */
         newEvent[evt.target.id] = selectedVal
@@ -57,8 +55,8 @@ export const EventForm = () => {
     const handleClickSaveEvent = (evt) => {
         evt.preventDefault() //Prevents the browser from submitting the form
 
-        //invoke addAnimal passing animal as an argument.
-        //once complete, change the url and display the animal list
+        //invoke addEvent passing event as an argument.
+        //once complete, change the url and display the event list
         addEvent(event)
             .then(() => history.push("/events"))
     }
