@@ -1,17 +1,3 @@
-
-/* .events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .event {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
-  } */
-
   .event {
     background: rgb(161, 106, 106);
     border-style: solid;
@@ -70,10 +56,6 @@
 
   .event__date {
     margin-left: 1em;
-  }
-
-  .btn-weather {
-    /* margin-left: 35%; */
   }
 
   .first_event {

@@ -16,7 +16,7 @@ export const Nutshell = () => (
           return (
             <>
             <img className="logo" src={logo}></img>
-            <h1>Headless Horseman Social</h1>
+            <h1>Headless Horsemen Social</h1>
               <NavBar />
               <ApplicationViews />
             </>
