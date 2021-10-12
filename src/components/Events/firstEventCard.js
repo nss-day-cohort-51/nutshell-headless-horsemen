@@ -20,11 +20,11 @@ export const FirstEventCard = ({ event, handleDeleteEvent }) => {
             <h3 className="first_event__name">{event.name}</h3>
             <div className="first_event__location">{event.location}</div>
             <div className="first_event__date">{getReadableDate(event.date)}</div>
-            <button type="first_button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
+            <button className="btn-delete"type="first_button" onClick={() => handleDeleteEvent(event.id)}>Delete</button>
             <Link to={`/events/${event.id}`}>
-                <button>Details</button>
+                <button className="btn-details">Details</button>
             </Link>
-            <button type="first_button"
+            <button className="btn-edit"type="first_button"
                 onClick={() => history.push(`/events/edit/${event.id}`)}>
                 Edit
             </button>

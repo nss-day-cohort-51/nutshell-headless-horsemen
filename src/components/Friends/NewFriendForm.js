@@ -14,7 +14,7 @@ export const NewFriendForm = ({getFriends}) => {
     const [friendName, setFriendName] = useState("")
 
 
-// grabs value of friendname
+// as you tupe updates state variable friendName
     const handleControlledInputChange = (event) => {
         let newFriend =  friendName
         let selectedVal = event.target.value
@@ -24,7 +24,6 @@ export const NewFriendForm = ({getFriends}) => {
         newFriend = selectedVal
 
         setFriendName(newFriend)
-        console.log(friendName)
     }
 
     
@@ -50,7 +49,7 @@ export const NewFriendForm = ({getFriends}) => {
 
     return (
         <form className="friendForm">
-            <h2 className="friendForm__title">New Friend</h2>
+            <h2 className="friendForm__title">New Friend:</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">UserName:</label>

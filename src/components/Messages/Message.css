@@ -1,1 +1,23 @@
-placeHolder
+.message_card {
+  flex-basis: 28%;
+  margin: 1em;
+  padding: 1em;
+  margin-right: 70%;
+  background-color: rgb(161, 106, 106);
+  border-style: solid;
+  border-color: white;
+  border-width: .25em;
+}
+ 
+.message_message {
+  font-weight: bold;
+  font-size: .5cm;
+}
+
+button.btn.btn-primary {
+  color: white;
+}
+
+button.btn.btn-primary:hover {
+  background-color: grey;
+}
